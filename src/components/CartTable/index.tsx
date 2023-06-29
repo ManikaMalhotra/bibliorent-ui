@@ -1,6 +1,3 @@
-// Book name, Author name, Genre, Year of publishing, etc
-// ○	There should be an exclusive way of indicating the availability of the books, and the number of available copies, along with the previously mentioned fields.
-
 import { Table, ScrollArea, ActionIcon } from '@mantine/core';
 import { Book } from '../../types/book';
 import { HiOutlineTrash } from 'react-icons/hi';
@@ -12,6 +9,7 @@ export function CartTable({ data }: Book) {
     const { classes } = useStyles();
     const rows = data.map((item) => {
         const [value, setValue] = useState<[Date | null, Date | null]>([new Date(), null]);
+        
         return (
             <tr key={item.id}>
                 <td>

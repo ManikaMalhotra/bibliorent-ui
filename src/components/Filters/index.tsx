@@ -3,6 +3,10 @@
 import { Autocomplete, Button, Flex, NativeSelect } from '@mantine/core';
 
 export function Filters() {
+    const applyFilters = () => {
+        console.log('Filters applied');
+    };
+    
     return (
         <Flex align={'flex-end'} gap="md" ml="md">
             <Autocomplete
@@ -14,7 +18,7 @@ export function Filters() {
                 data={['React', 'Vue', 'Angular', 'Svelte']}
                 label="Genre"
             />
-            <Button style={{backgroundColor: '#fd7e14', color: 'white'}}>Apply filters</Button>
+            <Button style={{backgroundColor: '#fd7e14', color: 'white'}} onClick={() => applyFilters()}>Apply filters</Button>
         </Flex>
     );
 }

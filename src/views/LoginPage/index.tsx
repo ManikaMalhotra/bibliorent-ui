@@ -33,7 +33,7 @@ export default function LoginPage() {
         <div className={classes.wrapper}>
             <Paper className={classes.form} radius={0} p={30}>
                 <Title order={2} className={classes.title} ta="center" mt="md" mb={50}>
-                    Welcome back to BiblioRent!
+                    {type === 'register' ? "Welcome to BiblioRent!" : "Welcome back to BiblioRent!"}
                 </Title>
 
                 <form onSubmit={form.onSubmit((values) => console.log(values))}>

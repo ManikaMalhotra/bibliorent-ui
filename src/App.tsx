@@ -1,14 +1,17 @@
 import { MantineProvider } from '@mantine/core';
-// import LoginPage from './views/LoginPage';
-// import HomePage from './views/HomePage';
-import CartPage from './views/CartPage';
+import LoginPage from './views/LoginPage';
+import HomePage from './views/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function App() {
 	return (
 		<MantineProvider withGlobalStyles withNormalizeCSS>
-			{/* <LoginPage /> */}
-			{/* <HomePage /> */}
-			<CartPage />
+			<Router>
+				<Routes>
+					<Route path="/login" element={<LoginPage />} />
+					<Route path="/home" element={<HomePage />} />
+				</Routes>
+			</Router>
 		</MantineProvider>
 	);
 }
