@@ -12,7 +12,7 @@ export function Filters() {
             <Autocomplete
                 label="Search"
                 placeholder="Pick one"
-                data={['React', 'Angular', 'Svelte', 'Vue']}
+                data={[]}
             />
             <NativeSelect
                 data={['React', 'Vue', 'Angular', 'Svelte']}
