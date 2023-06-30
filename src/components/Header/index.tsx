@@ -37,8 +37,11 @@ export function Header({ user }: HeaderTabsProps) {
 
                     <Group>
                         <Modal
-                        className={classes.modal}
-                        opened={opened} onClose={close}>
+                            style={{flex: "1 1 27.5rem !important"}}
+                            className={classes.modal}
+                            opened={opened} 
+                            onClose={close}
+                        >
                             <CartTable data={data} />
                             <Button variant="light" color='orange' radius="xs" size="lg" rightIcon={<IoBagCheckOutline />}>
                                 Checkout

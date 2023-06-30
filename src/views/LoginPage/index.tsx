@@ -13,8 +13,10 @@ import { useForm } from '@mantine/form';
 import { useToggle, upperFirst } from '@mantine/hooks';
 import { FcGoogle } from 'react-icons/fc';
 import { useStyles } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
+    const navigate = useNavigate();
     const { classes } = useStyles();
     const [type, toggle] = useToggle(['login', 'register']);
     const form = useForm({
@@ -100,7 +102,7 @@ export default function LoginPage() {
                                 ? 'Already have an account? Login'
                                 : "Don't have an account? Register"}
                         </Anchor>
-                        <Button type="submit" variant="gradient" gradient={{ from: 'orange', to: 'red' }}>
+                        <Button type="submit" variant="gradient" gradient={{ from: 'orange', to: 'red' }} onClick={() => navigate('/home')}>
                             {upperFirst(type)}
                         </Button>
                     </Group>
