@@ -15,7 +15,7 @@ export function Filters() {
                 data={[]}
             />
             <NativeSelect
-                data={['React', 'Vue', 'Angular', 'Svelte']}
+                data={[]}
                 label="Genre"
             />
             <Button style={{backgroundColor: '#fd7e14', color: 'white'}} onClick={() => applyFilters()}>Apply filters</Button>
