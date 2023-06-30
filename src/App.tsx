@@ -7,7 +7,7 @@ import { useGenresStore } from './stores/genres';
 
 export default function App() {
 	const { getGenres } = useGenresStore();
-	
+
 	useEffect(() => {
 		getGenres()
 			.then(() => {
@@ -22,6 +22,7 @@ export default function App() {
 		<MantineProvider withGlobalStyles withNormalizeCSS>
 			<Router>
 				<Routes>
+					<Route path="/" element={<LoginPage />} />
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/home" element={<HomePage />} />
 				</Routes>
