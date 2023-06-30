@@ -44,7 +44,7 @@ export function CartTable({ data }: Book) {
         <ScrollArea className={classes.scrollarea}>
             <Table miw={800} verticalSpacing="sm">
                 <thead>
-                    <tr>
+                    <tr className={classes.tableHeading}>
                         <th>Book Name</th>
                         <th>Author</th>
                         <th>Genre</th>

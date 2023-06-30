@@ -41,31 +41,11 @@ export const useStyles = createStyles((theme) => ({
             0.5
         ),
     },
-
-    tabsList: {
-        borderBottom: '0 !important',
-    },
-
-    tab: {
-        fontWeight: 500,
-        height: rem(38),
-        color: theme.white,
-        backgroundColor: 'transparent',
-        borderColor: theme.fn.gradient({ from: 'orange', to: 'red' }),
-
-        '&:hover': {
-            backgroundColor: theme.fn.lighten(
-                'rgba(255, 255, 255, 0.1)',
-                0.5
-            ),
-        },
-
-        '&[data-active]': {
-            backgroundColor: theme.fn.lighten(
-                'rgba(255, 255, 255, 0.1)',
-                0.5
-            ),
-            borderColor: theme.white,
-        },
-    },
+    
+    modal: {
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        flex: '1 1 27.5rem'
+    }
 }));

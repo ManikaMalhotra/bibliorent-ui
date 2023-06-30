@@ -36,7 +36,9 @@ export function Header({ user }: HeaderTabsProps) {
                     </Group>
 
                     <Group>
-                        <Modal opened={opened} onClose={close}>
+                        <Modal
+                        className={classes.modal}
+                        opened={opened} onClose={close}>
                             <CartTable data={data} />
                             <Button variant="light" color='orange' radius="xs" size="lg" rightIcon={<IoBagCheckOutline />}>
                                 Checkout

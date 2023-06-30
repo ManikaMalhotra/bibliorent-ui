@@ -6,5 +6,8 @@ export const useStyles = createStyles((theme) => ({
     }, 
     datepicker: {
         margin: theme.spacing.xs,
-    }
+    },
+    tableHeading: {
+        backgroundImage: theme.fn.gradient({ from: 'orange', to: 'red', deg: -15 }),
+    },
 }));
